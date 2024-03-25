@@ -1,0 +1,33 @@
+/* pages/demo02/demo02.wxss */
+.loginTitle{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.select{
+	font-size: 36rpx;
+	color: red;
+	width: 50%;
+	text-align: center;
+	height: 90rpx;
+	line-height: 90rpx;
+	border-bottom: 5rpx solid red;
+}
+.default{
+	font-size: 36rpx;
+	margin: 0 auto;
+	padding: 22rpx;
+}
+.hr{
+	border: 1rpx solid #ccc;
+	opacity: 0.2;
+}
+swiper swiper-item view{
+	margin-top:10px;
+	border:1px solid #cccccc;
+	width:99%;
+	height:400rpx;
+}
+swiper{
+	height: 430rpx;
+}

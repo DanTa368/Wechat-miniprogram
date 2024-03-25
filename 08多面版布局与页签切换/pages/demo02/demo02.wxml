@@ -1,0 +1,16 @@
+<!--pages/demo02/demo02.wxml-->
+<view class="content">
+    <view class="loginTitle">
+        <view class="{{currentTab==0?'select':'default'}}" bindtap="switch" data-current="0">账户登陆</view>
+        <view class="{{currentTab==0?'select':'default'}}"bindtap="switch" data-current="1">手机登陆</view>
+    </view>
+    <view class="hr"></view>
+    <swiper current="{{currentTab}}">
+        <swiper-item>
+            <view>账户登陆</view>
+        </swiper-item>
+        <swiper-item>
+            <view>手机登陆</view>
+        </swiper-item>
+    </swiper>
+</view>
