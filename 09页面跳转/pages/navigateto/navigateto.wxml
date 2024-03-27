@@ -1,0 +1,5 @@
+<!--pages/navigateto/navigateto.wxml-->
+
+<navigator open-type="navigateBack">Back</navigator>
+<button bindtap="navigateBack">返回</button>
+<view>{{title}}</view>

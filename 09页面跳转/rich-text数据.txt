@@ -1,0 +1,36 @@
+<!-- 
+  rich-text 富文本标签
+  1 nodes属性来实现
+    1 接收标签字符串 
+    2 接收对象数组 
+ -->
+
+// 1 标签字符串 最常用的
+        html: '<div style="line-height: 60px; color: red;">Hello&nbsp;World!<p style="font-size: 50px; color: green;">ho ho </p></div>',
+        // 2 对象数组
+        nodes:[
+          {
+            // 1 div标签 name属性来指定
+            name:"div",
+            // 2 标签上有哪些属性
+            attrs:{
+              // 标签上的属性 class  style
+              class:"my_div",
+              style:"color:red;"
+            },
+            // 3 子节点 children 要接收的数据类型和 nodes第二种渲染方式的数据类型一致 
+            children:[
+              {
+                name:"p",
+                attrs:{},
+                // 放文本
+                children:[
+                  {
+                    type:"text",
+                    text:"hello"
+                  }
+                ]
+              }
+            ]
+          }
+        ]

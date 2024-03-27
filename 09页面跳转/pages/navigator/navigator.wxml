@@ -1,0 +1,6 @@
+<!--pages/navigator/navigator.wxml-->
+<navigator 
+url="/pages/detail/detail?name=iPhoneX&price=8888$">
+    <image src="/public/imgs/iphone.png" style="height: 426px;"></image>
+    <view style="text-align: center;">iPhoneX</view>
+</navigator>

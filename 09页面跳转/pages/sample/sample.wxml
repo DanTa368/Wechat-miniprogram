@@ -1,0 +1,3 @@
+<!--pages/sample/sample.wxml-->
+<navigator url="/pages/navigateto/navigateto?title=navigate">跳转到navigateto</navigator>
+<button bindtap="navigateto">跳转 wx.navigateto</button>

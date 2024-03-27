@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/sample/sample",
+    "pages/navigateto/navigateto",
+    "pages/navigator/navigator",
+    "pages/detail/detail",
+    "pages/demo01/demo01",
+    "pages/demo02/demo02",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

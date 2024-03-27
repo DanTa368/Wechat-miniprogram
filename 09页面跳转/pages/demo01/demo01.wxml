@@ -1,0 +1,13 @@
+
+<navigator url="/pages/index/index">首页1</navigator>
+<navigator url="/pages/index/index">首页2</navigator>
+<navigator url="../index/index"><image src="/images/glgs.jpg"></image></navigator>
+<navigator open-type="navigate" url="/pages/index/index">首页3
+不能跳转tabbar</navigator>
+<navigator open-type="redirect" url="/pages/index/index">首页4
+不能跳转tabbar</navigator>
+<navigator open-type="switchTab" url="/pages/index/index">首页5
+只能跳转tabbar</navigator>
+<navigator open-type="reLaunch" url="/pages/index/index">首页6
+任意</navigator>
+<navigator url="/pages/demo02/demo02?name=小明&age=18">传参</navigator>
