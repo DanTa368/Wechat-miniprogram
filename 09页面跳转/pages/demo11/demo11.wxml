@@ -1,0 +1,20 @@
+<!-- 
+  rich-text 富文本标签
+  1 nodes属性来实现
+    1 接收标签字符串 
+    2 接收对象数组 
+ -->
+ <view>
+    <view>传入html字符串</view>
+    <view>
+      <rich-text nodes="{{html}}"></rich-text>
+    </view>
+  </view>
+  <view>
+    <view>传入节点列表</view>
+    <view>
+      <rich-text nodes="{{nodes}}"></rich-text>
+    </view>
+  </view>
+
+  
