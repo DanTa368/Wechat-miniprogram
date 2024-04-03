@@ -1,0 +1,51 @@
+<!-- 
+  radio 单选框
+  1 radio标签 必须要和 父元素 radio-group来使用
+  2 value 选中的单选框的值 
+  3 需要给 radio-group 绑定 change事件 
+  4 需要在页面中显示 选中的值
+ -->
+
+<radio-group bindchange="handleChange">
+  <radio color="red" value="male">男</radio>
+  <radio color="blue" value="female">女</radio>
+</radio-group>
+
+<view>你选择的是：{{gender==""?"":gender=="male"?"男":"女"}}</view>
+
+----------------------
+<checkbox-group bindchange="handleItemChange">
+  <checkbox wx:for="{{list}}" value="{{item.value}}">
+    {{item.name}}
+  </checkbox>
+</checkbox-group>
+
+<view>选中的水果是：{{checkList}}</view>
+---------------
+<!-- 视频组件 -->
+<!-- controls 控制条 -->
+<!-- muted 禁音 -->
+<video 
+autoplay 
+controls 
+muted 
+style="width: 100%;" 
+src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+></video>
+
+<!-- slider组件 -->
+------------
+<view>
+  <text>缩放比例：{{sliderValue}}%</text>
+  <view>
+    <slider 
+    bindchange="sliderChange"
+    min="10"
+    max="100"
+    step="2"
+    show-value
+    activeColor="red"
+    backgroundColor="green"
+    ></slider>
+  </view>
+</view>
