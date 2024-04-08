@@ -1,0 +1,6 @@
+<view class="section">
+    <view class="section_title">地区选择器</view>
+    <picker range="{{array}}" mode="selector" bindchange="bindPickerChange">
+        <view class="picker">当前选择的是：{{array[index]}}</view>
+    </picker>
+</view> 
