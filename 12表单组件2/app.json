@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/picker-view/picker-view",
+    "pages/picker-date/picker-date",
+    "pages/form/form",
     "pages/picker-time/picker-time",
     "pages/picker-selector/picker-selector",
     "pages/label/label",

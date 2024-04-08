@@ -21,6 +21,24 @@
                     "pathName": "pages/index/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "pages/form/form",
+                    "pathName": "pages/form/form",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/picker-date/picker-date",
+                    "pathName": "pages/picker-date/picker-date",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/picker-view/picker-view",
+                    "pathName": "pages/picker-view/picker-view",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
