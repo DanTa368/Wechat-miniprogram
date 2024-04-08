@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/form/form",
+    "pages/switch/switch",
+    "pages/picker-view2/picker-view2",
+    "pages/picker-view/picker-view",
+    "pages/picker-region/picker-region",
+    "pages/picker-multiSelector/picker-multiSelector",
+    "pages/picker-date/picker-date",
+    "pages/picker-time/picker-time",
+    "pages/picker-selector/picker-selector",
+    "pages/label2/label2",
+    "pages/label/label",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
