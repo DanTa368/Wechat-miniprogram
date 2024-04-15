@@ -1,0 +1,14 @@
+<!-- <view>{{aaa}}</view> -->
+<view class="tabs">
+  <view class="tabs_title">
+     <view wx:for="{{tabs}}" wx:key="id" class="title_item {{item.isActive?'active':''}}"
+     bindtap="handleItemTap" data-index="{{index}}" >{{item.name}}</view>
+  </view>
+  <view class="tab_content">
+    <!-- <slot/> -->
+    <block wx:if="{{tabs[0].isActive}}">首页</block>
+    <block wx:if="{{tabs[1].isActive}}">原创</block>
+    <block wx:if="{{tabs[2].isActive}}">分类</block>
+    <block wx:if="{{tabs[3].isActive}}">关于</block>
+  </view>
+</view>
