@@ -1,0 +1,36 @@
+page{
+    color: #666;
+    padding: 10rpx;
+}
+
+.nav{
+    white-space: nowrap;
+    padding: 5rpx 0;
+}
+
+.nav_item{
+    /* border: 1px solid red; */
+    display: inline-block;
+    font-size: 30rpx;
+    padding: 20rpx 45rpx;
+}
+
+.active{
+    border-bottom: 5rpx solid #de688b;
+}
+
+/* 轮播图 */
+.slides{
+    margin-top: 10rpx;
+}
+
+.slides swiper{
+    /* border: 5rpx solid blue; */
+    height: calc(750rpx *141/480);
+}
+.slides navigator{
+    width: 100%;
+}
+.slides image{
+    width: 100%;
+}
