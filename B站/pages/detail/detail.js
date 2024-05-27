@@ -1,18 +1,28 @@
-// pages/logs/logs.js
+import { request } from "../../request/index.js"
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        videoInfo: [],
+    },
+    // 根据id查询视频信息
+    getCurrentVideoInfo(videoId) {
+        request({url:`https://mock.mengxuegu.com/mock/662f3242026ee44c07ff9eb9/bi/videoInfo?id=${videoId}`,})
+        .then(res =>{
+            this.setData({
+                videoInfo:res.data.data.videoInfo
+            })
+        })
 
     },
-
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        let videoId = options.id;
+        this.getCurrentVideoInfo(videoId);
     },
 
     /**

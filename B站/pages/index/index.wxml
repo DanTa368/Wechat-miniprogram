@@ -1,34 +1,46 @@
 <view class="main">
-    <!-- 公共头部 -->
-    <MyTitle></MyTitle>
-
-    <!-- 首页导航 -->
-    <view class="nav_wrap">
-        <scroll-view scroll-x="true" class="nav">
-            <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="id">
-                {{item.text}}
+   <!-- 公共头部 -->
+   <MyTitle></MyTitle>
+   <!-- 首页导航 -->
+   <view class="nav_wrap">
+      <scroll-view scroll-x="true" class="nav">
+         <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="id">
+            {{item.text}}
+         </view>
+      </scroll-view>
+   </view>
+   <view class="slides">
+      <swiper autoplay indicator-dots circular interval="1000">
+         <swiper-item wx:for="{{swiperList}}" wx:key="*this">
+            <navigator>
+               <image src="{{item.imgSrc}}" mode="widthFix"></image>
+            </navigator>
+         </swiper-item>
+      </swiper>
+   </view>
+   <!-- 视频列表 -->
+   <view class="video_wrap">
+      <navigator url="../detail/detail" class="video_item" wx:for="{{videosList}}" wx:key="id">
+         <!-- 图片容器 -->
+         <view class="video_img">
+            <image mode="widthFix" src="{{item.imgSrc}}"></image>
+            <!-- 播放量模块 -->
+            <view class="video_info">
+               <!-- 播放量 -->
+               <view class="play_count_warp">
+                  <text class="fa fa-play-circle-o"></text>
+                  <text class="play_count">{{item.playCount}}</text>
+               </view>
+               <!-- 评论量 -->
+               <view class="comment_count_warp">
+                  <text class="fa fa-commenting-o"></text>
+                  <text class="comment_count">{{item.playCount}}</text>
+               </view>
             </view>
-        </scroll-view>
-    </view>
+         </view>
 
-    <!-- 轮播图 -->
-    <view class="slides">
-        <swiper autoplay indicator-dots circular>
-            <swiper-item wx:for="{{swiperList}}" wx:key="*this">
-                <navigator>
-                    <image src="{{item.imgSrc}}" mode="widthFix"></image>
-                </navigator>
-            </swiper-item>
-        </swiper>
-    </view>
-
-    <!-- 视频 -->
-    <view class="video_wrap" >
-        <navigator url="" class="video_item" wx:for="{{videosList}}" wx:key="id">
-            <!-- 图片 -->
-            <image src="{{item.imgSrc}}" mode="widthFix"></image>
-            <!-- 标题 -->
-            <view class="vidoe_title">{{item.desc}}</view>
-        </navigator>
-    </view>
+         <!-- 标题 -->
+         <view class="video_title">{{item.desc}}</view>
+      </navigator>
+   </view>
 </view>
