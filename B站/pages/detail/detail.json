@@ -1,6 +1,8 @@
 {
+  "navigationBarTitleText": "视频详情",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark",
   "usingComponents": {
-    "MyTitle":"/components/MyTitle/MyTitle"
-  },
-  "navigationBarTitleText": "详情页面"
+    "MyTitle": "../../components/MyTitle/MyTitle"
+  }
 }

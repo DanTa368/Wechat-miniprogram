@@ -1,56 +1,56 @@
 page{
     color: #666;
     padding: 10rpx;
-}
+    height: 100%;
+  }
 /* 首页导航 */
 .nav{
-   white-space: nowrap;
-   padding: 5rpx 0;
+  white-space: nowrap;
+  padding: 5rpx 0;
 }
 .nav_item{
-    /* border: 1px solid red; */
-    display: inline-block;
-    font-size: 30rpx;
     padding: 20rpx 45rpx;
-}
-.active{
+    font-size: 30rpx;
+    display: inline-block;
+  }
+.nav_item.active{
     border-bottom: 5rpx solid #de688b;
-}
-/* 轮播图 */
+  }
+  /* 轮播图 */
 .slides{
     margin-top: 10rpx;
-}
-.slides swiper{
-    /* border: 5rpx solid blue; */
-    height: calc(750rpx *141/480);
-}
-.slides navigator{
+  }
+  .slides swiper{
+    /* height: 220rpx; */
+    height: calc(750rpx *141 /480);
+  }
+  .slides navigator{
     width: 100%;
-}
-.slides image{
+  }
+  .slides image{
     width: 100%;
-}
-
+  }
+  
 /* 视频列表 */
 .video_wrap{
     display: flex;
-    /* 根据子元素宽度换行 */
     flex-wrap: wrap;
+    padding: 5rpx;
     justify-content: space-between;
-}
-.video_item{
+  }
+  
+  .video_item{
     width: 48%;
     margin-bottom: 20rpx;
-}
-.video_img{
+  }
+  .video_img{
     position: relative;
   }
-.video_img image{
+  .video_img image{
     width: 100%;
     border-radius: 15rpx;
-}
-
-.video_img .video_info{
+  }
+  .video_img .video_info{
     position: absolute;
     bottom: 10rpx;
     left: 0;
@@ -71,7 +71,14 @@ page{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
+  /* 页标签切换 swiper 高度设置，必须设置page高度为300% 才生效 */
+ .tab{
+    height: 100%;
+}
+   
   
-  .tab{
-      height: 100%;
-  }
+  
+  
+  
+  
+  

@@ -1,58 +1,44 @@
-/* components/MyTitle/MyTitle.wxss */
-.my_title {
-  display: flex;
-  padding: 10rpx;
-  background-color: #fff;
-  align-items: center;
+.my_title{
+    display: flex;
+    align-items: center;
+    padding: 10rpx;
+    background-color: #fff;
 }
-
-.logo_img {
-  width: 140rpx;
-  height: 60rpx;
+.logo{
+    flex: 7;
 }
-
-.search_img {
-  width: 60rpx;
-  height: 44rpx;
+.logo_img{
+   width: 140rpx;
+   height: 60rpx; 
 }
-
-.user_img {
-  width: 54rpx;
-  height: 60rpx;
+.search_icon{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.logo {
-  flex: 7;
+.search_img{
+    width: 60rpx;
+    height: 44rpx;
 }
-
-.search_icon {
-  flex: 1;
-  display: flex;
-  /* 水平对齐 */
-  justify-content: center;
-  /* 垂直对齐 */
-  align-items: center;
+.user_icon{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.user_icon {
-  flex: 2;
-  display: flex;
-  /* 水平对齐 */
-  justify-content: center;
-  /* 垂直对齐 */
-  align-items: center;
+.user_img{
+    width: 54rpx;
+    height: 60rpx;
 }
-
-.down_app {
-  flex: 3;
-  background-color: pink;
-  display: flex;
-  /* 水平对齐 */
-  justify-content: center;
-  /* 垂直对齐 */
-  align-items: center;
-  padding: 10rpx;
-  border-radius: 10rpx;
-  color: #fff;
-  font-size: 30rpx;
-}
+.down_app{
+    flex: 3;
+    font-size: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    color: #fff;
+    border-radius: 10rpx;
+    padding: 10rpx;
+  }

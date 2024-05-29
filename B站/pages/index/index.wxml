@@ -1,46 +1,80 @@
-<view class="main">
-   <!-- 公共头部 -->
-   <MyTitle></MyTitle>
-   <!-- 首页导航 -->
-   <view class="nav_wrap">
-      <scroll-view scroll-x="true" class="nav">
-         <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="id">
-            {{item.text}}
-         </view>
-      </scroll-view>
-   </view>
-   <view class="slides">
-      <swiper autoplay indicator-dots circular interval="1000">
-         <swiper-item wx:for="{{swiperList}}" wx:key="*this">
-            <navigator>
-               <image src="{{item.imgSrc}}" mode="widthFix"></image>
-            </navigator>
-         </swiper-item>
-      </swiper>
-   </view>
-   <!-- 视频列表 -->
-   <view class="video_wrap">
-      <navigator url="../detail/detail" class="video_item" wx:for="{{videosList}}" wx:key="id">
-         <!-- 图片容器 -->
-         <view class="video_img">
-            <image mode="widthFix" src="{{item.imgSrc}}"></image>
-            <!-- 播放量模块 -->
-            <view class="video_info">
-               <!-- 播放量 -->
-               <view class="play_count_warp">
-                  <text class="fa fa-play-circle-o"></text>
-                  <text class="play_count">{{item.playCount}}</text>
-               </view>
-               <!-- 评论量 -->
-               <view class="comment_count_warp">
-                  <text class="fa fa-commenting-o"></text>
-                  <text class="comment_count">{{item.playCount}}</text>
-               </view>
-            </view>
-         </view>
+  <!--公共头部 -->
+  <MyTitle></MyTitle>
+  <!--首页导航 -->
+  <view class="nav_wrap">
+     <!--小程序自己滚动区域的组件 -->
+     <scroll-view class="nav" scroll-x>
+     <view 
+     bindtap="activeNav"
+     data-index="{{ index }}"
+     class="nav_item  {{ index === currentIndexNav ? 'active' : '' }}" wx:for="{{navList}}"  wx:key="id">
+     {{item.text}}
+     </view>
+     </scroll-view>
+  </view>
+  <!-- 页标签切换 -->
 
-         <!-- 标题 -->
-         <view class="video_title">{{item.desc}}</view>
-      </navigator>
-   </view>
+  <swiper bindchange="bindChange" current="{{currentIndexNav}}" class="tab" style="height: {{swiperHeight}}px;">
+     <swiper-item>
+     <view class="v1">
+           <!-- 轮播图 -->
+  <view class="slides">
+    <swiper autoplay indicator-dots circular interval="1000">
+      <swiper-item wx:for="{{swiperList}}" wx:key="*this">
+        <navigator>
+          <image mode="widthFix" src="{{item.imgSrc}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+   <!-- 视频列表 -->
+  <view class="video_wrap">
+    <navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videosList}}" wx:key="id" >
+      <!-- 图片容器 -->
+      <view class="video_img">
+        <!-- 图片 -->
+        <image mode="widthFix" src="{{item.imgSrc}}"></image>
+        <!-- 播放量模块 -->
+        <view class="video_info">
+          <!-- 播放量 -->
+          <view class="play_count_wrap">
+            <!-- 图标 -->
+            <text class="fa fa-play-circle-o"></text>
+            <!-- 数值 -->
+            <text class="play_count">{{item.playCount}}</text>
+          </view>
+          <!-- 评论量 -->
+          <view class="comment_count_row">
+            <!-- 图标 -->
+            <text class="fa fa-commenting-o"></text>
+            <!-- 数值 -->
+            <text class="comment_count">{{item.commentCount}}</text>
+        </view>
+        </view>
+      </view>
+      <!-- 标题 -->
+      <view class="video_title">{{item.desc}}</view>
+    </navigator>
+  </view> 
 </view>
+     </swiper-item>
+     
+     <swiper-item>
+     <view class="v2">
+           <!-- 动画页面 -->
+      <include src="/pages/donghua/donghua" />
+    </view>
+     </swiper-item>
+     <swiper-item>
+     <view class="v3">
+           <!-- 番剧页面 -->
+      <include src="/pages/fanju/fanju" />
+    </view>
+     </swiper-item>
+
+  </swiper>
+
+
+
+
+  
